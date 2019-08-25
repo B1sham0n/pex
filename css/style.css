@@ -1,0 +1,300 @@
+@font-face {
+    font-family: OpenSans-Regular; /* Гарнитура шрифта */
+    src: url(../src/fonts/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: OpenSans-Italic; /* Гарнитура шрифта */
+    src: url(../src/fonts/OpenSans-Italic.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: OpenSans-Bold; /* Гарнитура шрифта */
+    src: url(../src/fonts/OpenSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: OpenSans-Light; /* Гарнитура шрифта */
+    src: url(../src/fonts/OpenSans-Light.ttf); /* Путь к файлу со шрифтом */
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+/*header*/
+header{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 250px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logo{
+    width: 45%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 40px 0;
+}
+.logo-img{
+    width: 45px;
+    height: 45px;
+    background: url(../src/imgs/logo-img.png) no-repeat 100%;
+    background-size: contain;
+    margin-right: 10px
+}
+.logo-title{
+    height: 100%;
+    line-height: 35px;
+    font-size: 12px;
+    font-family: OpenSans-Italic, sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 16px 0 49px;
+}
+nav ul li a{
+    line-height: 120px;/*высота хедера*/
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+nav ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.search-wrapper{
+    position: relative;
+}
+.search-wrapper input{
+    height: 55px;
+    width: 264px;
+    border-radius: 25px;
+    border: none;
+    font-size: 15px;
+    margin: 0 22px;
+    padding: 0 10%;
+}
+.search-wrapper img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 40%;
+    right: 13%;
+}
+
+
+/*instructive-part*/
+.instructive-part{
+    height: 1060px;
+    background: url(../src/imgs/inctructive-part-bcg.png) no-repeat;
+    background-size: cover;
+}
+
+
+/*advertising*/
+.advertising{
+    height: 939px;/*1060px(instructive-part) - 120px(header)*/
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    align-items: flex-end;
+}
+.advertising h2, .advertising p{
+    margin: 0;
+}
+.advertising h2{
+    width: 610px;
+    line-height: 85px;
+    font-size: 55px;
+    text-align: right;
+    word-spacing: 3.5px;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin: 307px 89px 0 0;
+}
+.advertising p{
+    padding: 0 110px 2px 0;
+    font-size: 14px;
+    word-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.btn-get-started{
+    background-color: #8824cd;
+    color: #ffffff;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 22px;
+    border-radius: 33px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    padding: 21px 68px;
+    margin: 53px 80px 20px 0;
+}
+
+
+/*reasons*/
+.reasons{
+    background-color: #2e3b4e;
+    position: relative;
+}
+.wrapper-center-reasons{
+    height: 609px;
+    max-width: 975px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.reasons p{
+    margin: 0;
+}
+.reason-item{
+    height: 50%;
+    color: #ffffff;
+}
+.reason-item:nth-child(odd){
+    width: 51%;
+}
+.reason-item:nth-child(even){
+    width: 49%; /*51% odd + 49% even = 100% all*/
+}
+.reason-item:nth-child(1) .reason-title, 
+    .reason-item:nth-child(2) .reason-title {
+        margin-top: 90px;
+}
+.reason-title{
+    width: 100%;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.35px;
+    padding-bottom: 10px;
+}
+.reason-item:nth-child(odd) .reason-title{
+    padding-left: 5px;
+}
+.reason-item:nth-child(even) .reason-title{
+    padding-left: 9px;
+}
+.reason-content{
+    padding-top: 18px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.reason-item:nth-child(even) .reason-content{
+    padding-left: 7px;
+}
+.protrusion{
+    width: 170px;
+    height: 43px;
+    background-color: #2e3b4e;
+    position: absolute;
+    bottom: -43px;/*shape height*/
+    right: 45.5%;
+    clip-path: polygon(0% 0%, 5% 0%, 10% 5%, 20% 30%, 30% 70%, 35% 85%, 40% 95%, 45% 100%, 50% 100%, 55% 100%, 60% 95%, 65% 85%, 70% 70%, 80% 30%, 90% 5%, 95% 0%, 100% 0);
+    z-index: 1;
+}
+
+/*get-started*/
+.get-started{
+    height: 641px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(../src/imgs/get-start-bcg.png) no-repeat #c45269;
+    background-size: cover;
+    background-position-y: 83%;
+    color: #ffffff;
+    text-align: center; 
+}
+.get-started p, .get-started h2{
+    margin: 0;
+}
+.get-started h2{
+    font-weight: normal;
+    font-family: OpenSans-Light, sans-serif;
+    font-size: 40px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    margin-top: 175px;
+}
+.get-started p{
+    width: 30%;
+    align-self: center;
+    font-size: 18px;
+    line-height: 28px;
+    word-spacing: -0.5px;
+    margin-top: 15px;
+}
+.get-started-btn{
+    align-self: center;
+    font-size: 21px;
+    font-family: OpenSans-Bold, sans-serif;
+    background-color: #ffffff;
+    color: #c45269;
+    letter-spacing: 0.8px;
+    border-radius: 33px;
+    margin-top: 38px;
+    padding: 22px 105px;
+}
+
+
+/*some-content*/
+.some-content{
+    background-color: #ffffff;
+    height: 590px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.some-content-img{
+    height: 100%;
+    width: 748px;
+    overflow: hidden;
+    background: url(../src/imgs/some-content-img.png) no-repeat 100%;
+    background-size: cover;
+}
+.some-content .some-content-wrapper p{
+    margin: 0;
+}
+.some-content .some-content-wrapper{
+    width: 790px;
+    padding-right: 245px;
+    padding-top: 108px;
+}
+.some-content-headline{
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 17px;
+    word-spacing: 1.5px;
+}
+.some-content-text{
+    font-size: 22px;
+    line-height: 36px;
+    word-spacing: 2px;
+    padding-top: 6px;
+}
+.some-content-addition{
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 35px;
+}
