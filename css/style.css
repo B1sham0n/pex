@@ -14,6 +14,10 @@
     font-family: OpenSans-Light; /* Гарнитура шрифта */
     src: url(../src/fonts/OpenSans-Light.ttf); /* Путь к файлу со шрифтом */
 }
+@font-face {
+    font-family: OpenSans-Semibold; /* Гарнитура шрифта */
+    src: url(../src/fonts/OpenSans-Semibold.ttf); /* Путь к файлу со шрифтом */
+}
 body{
     margin: 0;
     padding: 0;
@@ -80,6 +84,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     border-bottom: 3px solid white;
+    transition: all 0.5s ease-out;
 }
 .search-wrapper{
     position: relative;
@@ -274,27 +279,185 @@ nav ul li a:hover{
     background: url(../src/imgs/some-content-img.png) no-repeat 100%;
     background-size: cover;
 }
-.some-content .some-content-wrapper p{
+.some-content-wrapper p{
     margin: 0;
+    padding: 0;
 }
 .some-content .some-content-wrapper{
     width: 790px;
     padding-right: 245px;
     padding-top: 108px;
 }
-.some-content-headline{
+.some-content-wrapper .some-content-headline{
     font-family: OpenSans-Bold, sans-serif;
     font-size: 17px;
-    word-spacing: 1.5px;
+    word-spacing: 1.9px;
+    letter-spacing: 0.2px;
 }
-.some-content-text{
+.some-content-wrapper .some-content-text{
     font-size: 22px;
-    line-height: 36px;
-    word-spacing: 2px;
-    padding-top: 6px;
+    line-height: 37px;
+    word-spacing: -1px;
+    letter-spacing: 0.45px;
+    padding-top: 4px;
 }
-.some-content-addition{
+.some-content-wrapper .some-content-addition{
     font-size: 18px;
     line-height: 30px;
-    padding-top: 35px;
+    padding-top: 30px;
+}
+
+
+/*rush-today*/
+.rush-today{
+    height: 653px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url(../src/imgs/rugh-today-bcg.png) no-repeat;
+    background-size: cover;
+    background-position-y: 74%;
+}
+.rush-today-content{
+    height: 542px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(78, 33, 94, 0.8);
+    color: #ffffff;
+}
+.rush-today-content p, .rush-today-content h2{
+    margin: 0;
+}
+.rush-today-content h2{
+    font-family: OpenSans-Light, sans-serif;
+    font-size: 45px;
+    margin-top: 97px;
+    margin-bottom: 28px;
+}
+.rush-today-content-text{
+    width: 950px;
+    line-height: 40px;
+    font-size: 23px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+.rush-today .btn-get-started{
+    display: inline-block;
+    margin: 30px 0 20px 0;
+    padding: 20px 72px;
+}
+.rush-today-content-coment{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 10px;
+}
+
+
+/*photography*/
+.photography{
+    height: 798px;
+    background: url(../src/imgs/photography-bcg.png) no-repeat;
+    background-size: cover;
+    background-position-y: 62%;
+}
+.wrapper-center-photography{
+    height: 100%;
+    max-width: 1410px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: #ffffff;
+    margin: 0 auto;
+}
+.wrapper-center-photography h2{
+    width: 620px;
+    font-size: 47px;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+    margin: 0 0 22px 5px;
+    padding: 0;
+}
+.wrapper-photograph{
+    display: flex;
+    margin-bottom: 107px;
+}
+.wrapper-photograph .avatar{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: url(../src/imgs/avatar-photograph.png) no-repeat;
+    background-position-x: 44%;
+    margin-right: 17px;
+}
+.btn-photography{
+    font-size: 16px;
+    font-family: OpenSans-Semibold, sans-serif;
+    border: 2px solid #ffffff;
+    border-radius: 33px;
+    padding: 8px 29px;
+    margin: 0 0 18px 3px;
+}
+
+
+/*some-content another-content*/
+.another-content{
+    height: 613px;
+    background-color: #ffffff;
+    flex-direction: row-reverse;
+}
+.another-content .some-content-img{
+    width: 797px;
+    height: 100%;
+    background: url(../src/imgs/another-content-img.png) no-repeat;
+    background-size: cover;
+    background-position-x: 40%;
+}
+.another-content .some-content-wrapper{
+    padding: 132px 0 0 250px;
+}
+
+/*contact*/
+.contact{
+    height: 547px;
+    background-color: #e7526b;
+    color: #ffffff;
+}
+.contact p{
+    margin: 0;
+    padding-left: 250px;
+}
+.contact p:first-child{
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 18px;
+    padding-top: 89px;
+}
+.contact p:nth-child(2){
+    width: 480px;
+    line-height: 29px;
+    font-size: 18px;
+    word-spacing: -0.5px;
+    margin-top: 18px;
+}
+.contact p:nth-child(3){
+    font-size: 18px;
+    text-decoration: #ffffff solid underline;
+    margin-top: 35px;
+}
+
+
+/*footer*/
+footer{
+    height: 500px;
+    background-color: #2e3b4e;
+    color: #ffffff;
+}
+footer p{
+    font-size: 14px;
+    padding: 50px 0 0 250px;
+    word-spacing: 0.9px;
+    margin: 0;
 }
