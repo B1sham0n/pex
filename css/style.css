@@ -461,3 +461,7 @@ footer p{
     word-spacing: 0.9px;
     margin: 0;
 }
+
+.btn-get-started, .get-started-btn, .btn-photography{
+    cursor: pointer;
+}
