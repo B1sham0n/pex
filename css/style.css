@@ -33,7 +33,6 @@ header{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .logo{
-    width: 45%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -57,7 +56,6 @@ header{
     padding: 0;
 }
 nav{
-    width: 55%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -214,7 +212,7 @@ nav ul li a:hover{
     height: 43px;
     background-color: #2e3b4e;
     position: absolute;
-    bottom: -43px;/*shape height*/
+    bottom: -42px;/*shape height*/
     right: 45.5%;
     clip-path: polygon(0% 0%, 5% 0%, 10% 5%, 20% 30%, 30% 70%, 35% 85%, 40% 95%, 45% 100%, 50% 100%, 55% 100%, 60% 95%, 65% 85%, 70% 70%, 80% 30%, 90% 5%, 95% 0%, 100% 0);
     z-index: 1;
@@ -271,24 +269,30 @@ nav ul li a:hover{
     height: 590px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
 }
 .some-content-img{
     height: 100%;
-    width: 748px;
-    overflow: hidden;
+    flex: 0 0 748px;
     background: url(../src/imgs/some-content-img.png) no-repeat 100%;
     background-size: cover;
+}
+.some-content-wrapper{
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .some-content-wrapper p{
     margin: 0;
     padding: 0;
 }
-.some-content .some-content-wrapper{
-    width: 790px;
-    padding-right: 245px;
-    padding-top: 108px;
+.some-content .some-content-wrapper-text{
+    width: 78%;
+    height: 63%;
+    padding-left: 22px;
 }
 .some-content-wrapper .some-content-headline{
     font-family: OpenSans-Bold, sans-serif;
@@ -305,8 +309,8 @@ nav ul li a:hover{
 }
 .some-content-wrapper .some-content-addition{
     font-size: 18px;
-    line-height: 30px;
-    padding-top: 30px;
+    line-height: 31px;
+    margin-top: 30px;
 }
 
 
@@ -413,14 +417,16 @@ nav ul li a:hover{
     flex-direction: row-reverse;
 }
 .another-content .some-content-img{
-    width: 797px;
+    flex: 0 0 797px;
     height: 100%;
     background: url(../src/imgs/another-content-img.png) no-repeat;
     background-size: cover;
     background-position-x: 40%;
 }
-.another-content .some-content-wrapper{
-    padding: 132px 0 0 250px;
+.another-content .some-content-wrapper-text{
+    width: 78%;
+    height: 58%;
+    margin-left: 40px;
 }
 
 /*contact*/
